@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script defer src="/util/move_to_git.js"></script>
+    <style>
+      table {
+        border: 1px solid black;
+        border-spacing: 0;
+        border-collapse: collapse;
+      }
+
+      .center {
+        text-align: center;
+      }
+
+      .time {
+        text-align: center;
+      }
+
+      .dotted {
+        border-bottom: 1px dotted black;
+      }
+
+      .title {
+        background-color: rgb(253, 244, 195);
+        border-bottom: 1px solid rgb(200 200 200);
+      }
+
+      .title > th {
+        font-size: 2rem;
+        padding: 1.5rem 0;
+      }
+
+      .title2 {
+        background-color: rgb(231, 241, 255);
+      }
+
+      tbody > tr > td[rowspan]:first-child {
+        font-weight: 700;
+      }
+
+      table td:not(.time) {
+        border-bottom: 0.5px rgb(200 200 200) solid;
+        border-right: 0.5px rgb(200 200 200) solid;
+      }
+
+      .ot {
+        font-style: italic;
+      }
+
+      .total {
+        background-color: rgb(196, 215, 255);
+        font-style: italic;
+        font-weight: 700;
+      }
+
+      .total > td[colspan] {
+        border-bottom: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="javascript:moveToGit?.()">소스 보기</a>
+    <table>
+      <thead>
+        <tr class="title">
+          <th colspan="4" class="title">커리큘럼 - 디지털 컨버전스 공공데이터</th>
+        </tr>
+        <tr class="title2 dotted">
+          <th>교과목</th>
+          <th>능력단위</th>
+          <th>기술 스택 / 내용</th>
+          <th>배정시간</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="3">PROGRAMMING LANGUAGE (소프트웨어 개발언어 기본 문법)</td>
+          <td>프로그래밍 언어 활용</td>
+          <td rowspan="3">JAVA</td>
+          <td rowspan="3" class="time">165</td>
+        </tr>
+        <tr>
+          <td>프로그래밍 언어 응용</td>
+        </tr>
+        <tr>
+          <td>네트워크 프로그래밍 구현</td>
+        </tr>
+
+        <tr>
+          <td rowspan="3">BACK-END 1 DATABASE (SQL 활용 및 DB 설계)</td>
+          <td>데이터베이스 구현</td>
+          <td rowspan="3">ORACLE</td>
+          <td rowspan="3" class="time">109</td>
+        </tr>
+        <tr>
+          <td>SQL 활용</td>
+        </tr>
+        <tr class="dotted">
+          <td>SQL 응용</td>
+        </tr>
+
+        <tr class="dotted">
+          <td rowspan="2">FRONT-END (UI 디자인 + 구현)</td>
+          <td>UI 디자인</td>
+          <td rowspan="2">HTML5 / CSS / JAVASCRIPT / JQUERY</td>
+          <td rowspan="2" class="time">120</td>
+        </tr>
+        <tr class="dotted">
+          <td>UI 구현</td>
+        </tr>
+
+        <tr>
+          <td rowspan="3">BACK-END 2 (애플리케이션 설계 + 구현)</td>
+          <td>서버프로그램 구현</td>
+          <td rowspan="3">SERVLET / JSP, EL/JSTL, AJAX, MYBATIS</td>
+          <td rowspan="3" class="time">120</td>
+        </tr>
+        <tr>
+          <td>애플리케이션 설계</td>
+        </tr>
+        <tr class="dotted">
+          <td>인터페이스 구현</td>
+        </tr>
+
+        <tr>
+          <td rowspan="3">FULL STACK (실무 기술 이론)</td>
+          <td>요구사항 확인</td>
+          <td>UML & 데이터베이스 모델링</td>
+          <td rowspan="3" class="time">155</td>
+        </tr>
+        <tr>
+          <td>화면 구현</td>
+          <td>REACT</td>
+        </tr>
+        <tr class="dotted">
+          <td>통합 구현</td>
+          <td>SPRING FRAMEWORK (기본 + 응용) ...</td>
+        </tr>
+
+        <tr>
+          <td rowspan="4">조별 실습과제 (PROJECT)</td>
+          <td>[비NCS] 공공데이터 활용</td>
+          <td>
+            공공데이터의 이해. 공공데이터 분석 및 허가 받기. JSON, XML 기반 데이터 수집 실습.
+            공공데이터 기반 DB 분석, 구축, 실습 ...
+          </td>
+          <td rowspan="4" class="time">217</td>
+        </tr>
+        <tr>
+          <td>[비NCS] 공공데이터 아키텍처 설계</td>
+          <td>공공데이터 API 설계. 데이터 배포를 위한 REST 설계</td>
+        </tr>
+        <tr>
+          <td>애플리케이션 배포</td>
+          <td rowspan="2">애플리케이션 종합 구축</td>
+        </tr>
+        <tr class="dotted">
+          <td>애플리케이션 테스트 관리</td>
+        </tr>
+
+        <tr class="center">
+          <td class="ot">OT/수료식</td>
+          <td colspan="2">-</td>
+          <td class="time">2</td>
+        </tr>
+
+        <tr class="total center">
+          <td colspan="3">TOTAL 시간</td>
+          <td>888</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
