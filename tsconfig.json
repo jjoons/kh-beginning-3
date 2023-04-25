@@ -106,6 +106,13 @@
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true /* Skip type checking all .d.ts files. */
   },
-  "include": ["Day**/**/*.js", "Day**/**/*.ts", "Day**/**/*.jsx", "Day**/**/*.tsx"],
+  "include": [
+    "Day**/**/*.js",
+    "Day**/**/*.ts",
+    "Day**/**/*.jsx",
+    "Day**/**/*.tsx",
+    "util/**/*.js",
+    "util/**/*.jsx"
+  ],
   "exclude": ["node_modules"]
 }
