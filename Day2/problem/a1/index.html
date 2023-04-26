@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>입사지원서</h2>
+
+    <form>
+      <h3>필수 정보</h3>
+      <label for="name"></label>
+      <input id="name" placeholder="이름" />
+      <br />
+      <label for="birthday">생년월일</label>
+      <input type="date" />
+      <br />
+      <label for="gender">성별</label>
+      <select id="gender">
+        <option value="male">남성</option>
+        <option value="female">여성</option>
+      </select>
+
+      <h3>개발자는 왜?</h3>
+      <textarea placeholder="내용 입력"></textarea>
+
+      <h3>사용해본 것들</h3>
+      <input type="checkbox" name="tech_spec" id="tech_spec_java" />
+      <label for="tech_spec_java">Java</label><br />
+      <input type="checkbox" name="tech_spec" id="tech_spec_python" />
+      <label for="tech_spec_python">Python</label><br />
+      <input type="checkbox" name="tech_spec" id="tech_spec_html_css" />
+      <label for="tech_spec_html_css">HTML/CSS</label><br />
+      <input type="checkbox" name="tech_spec" id="tech_spec_js" />
+      <label for="tech_spec_js">JS</label><br />
+      <input type="checkbox" name="tech_spec" id="tech_spec_bootstrap" />
+      <label for="tech_spec_bootstrap">Bootstrap</label><br />
+      <input type="checkbox" name="tech_spec" id="tech_spec_sql" />
+      <label for="tech_spec_sql">SQL</label>
+
+      <h3>희망 부서</h3>
+      <input type="radio" name="wanted_a" id="wanted_a_fe" />
+      <label for="wanted_a_fe">프론트엔드</label>
+      <input type="radio" name="wanted_a" id="wanted_a_be" />
+      <label for="wanted_a_be">백엔드</label>
+      <input type="radio" name="wanted_a" id="wanted_a_db" />
+      <label for="wanted_a_db">DB</label>
+
+      <br /><br />
+      <input type="submit" value="지원" />
+      <input type="reset" value="리셋" />
+      <!--
+        <a href="https://facebook.com" target="_blank" rel="noopener">페이스북</a>
+        <a href="https://instagram.com" target="_blank" rel="noopener">인스타그램</a>
+      -->
+      <button type="button" onclick="location.href = 'https://instagram.com'">인스타그램</button>
+      <button type="button" onclick="window.open('https://facebook.com')">페이스북</button>
+    </form>
+  </body>
+</html>

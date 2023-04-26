@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>전송 화면</title>
+  </head>
+  <body>
+    <div hidden>
+      <h3>이메일 전송화면</h3>
+      <form>
+        이름:
+        <input type="text" /><br />
+        이메일 주소: <input type="email" /><br />
+        내용:<br />
+        <textarea rows="5" cols="50"></textarea><br />
+        <input type="submit" value="Send" />
+        <!-- 초기 값으로 초기화 -->
+        <input type="reset" value="Reset" />
+      </form>
+    </div>
+    <div>
+      <form>
+        <!--
+          min, max: 숫자 제한
+          step: 숫자 간격
+        -->
+        <input type="number" min="230" max="260" step="5" value="60" />
+        <br />
+        <input type="range" min="1" max="10" value="10" />
+        <br />
+        <!-- 드롭 다운 만들기 -->
+        <select>
+          <option value="bmw">BMW</option>
+          <option value="benz">Benz</option>
+          <option value="hyundai" selected>현대자동차</option>
+          <option value="kia">기아자동차</option>
+          <option value="porsche" disabled>포르쉐</option>
+        </select>
+        <br />
+        <!--
+          라벨: 웹에서 글자를 표현하는 태그
+          레이블 태그를 클릭하면 텍스트 컨트롤에 초점에 맞춰서 사용이 가능하고
+          특히 모바일이나 태블릿 환경에서 강점 발휘
+        -->
+        <label for="pet-select">Choose a pet: </label>
+        <!-- 목록 사이즈 4줄 + Shift로 다중 선택 -->
+        <select name="pets" id="pet-select" size="4" multiple>
+          <option value="dog">Dog</option>
+          <option value="cat">Cat</option>
+          <option value="hamster">Hamster</option>
+          <option value="parrot">Parrot</option>
+          <option value="spider">Spider</option>
+          <option value="goldfish">Goldfish</option>
+        </select>
+
+        <br />
+        <!--
+          optgroup: 콤보 박스 안에서 그룹을 지어서 표현
+        -->
+        <label for="pet-select">Choose a pet:</label><br />
+        <select name="pets" id="pet-select">
+          <option value="">--Please choose an option--</option>
+
+          <optgroup label="포유류">
+            <!-- 선택목록 그룹 -->
+            <option value="dog">Dog</option>
+            <option value="cat">Cat</option>
+            <option value="hamster">Hamster</option>
+          </optgroup>
+
+          <optgroup label="조류">
+            <option value="parrot">Parrot</option>
+          </optgroup>
+
+          <optgroup label="물고기">
+            <option value="goldfish">Goldfish</option>
+            <option value="spider">Shark</option>
+          </optgroup>
+        </select>
+
+        <br />
+        <!-- <input>의 list 속성값과 <datalist>의 id명을 똑같이 맞춰주어야 동작된다. -->
+        <label for="movie">What is your favourite Browser?</label>
+        <input type="text" list="browsers" />
+
+        <datalist id="browsers">
+          <option value="Internet Explorer"></option>
+          <option value="Firefox"></option>
+          <option value="Chrome"></option>
+          <option value="Opera"></option>
+          <option value="Safari"></option>
+        </datalist>
+      </form>
+
+      <br />
+      전화번호:
+      <input type="tel" required pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" title="###-####-####" /><br />
+      <input type="submit" />
+
+      <h3>date</h3>
+      <input type="date" />
+      <hr />
+
+      <h3>datetime</h3>
+      <input type="datetime" />
+      <hr />
+
+      <h3>datetime-local</h3>
+      <input type="datetime-local" />
+      <hr />
+
+      <h3>week</h3>
+      <input type="week" />
+      <hr />
+    </div>
+  </body>
+</html>

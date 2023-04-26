@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>input 태그</title>
+    <style>
+      [hidden] {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div hidden>
+      <input type="text" title="text_box" />
+      태그
+      <br />
+      <hr />
+      사용자가 정보를 입력하는 부분 어떤 양식이나 형식으로 폼을 결정한다.
+      <br />
+      <br />
+      form 태그: HTML에서 입력받은 다음에 데이터베이스나 서버로 전송해서 내가 추가적인 기능을 할 수
+      있도록 만들어 주는 것
+      <br />
+      방식: GET, POST
+      <br />
+    </div>
+    <div hidden>
+      <form>
+        <!--
+          <br />
+          버튼
+          type
+          value
+
+          onclick: 버튼을 클릭했을 때 실행하는 기능 연결
+          alert('메시지'): 웹 브라우저의 팝업창
+          text 태그 size="" maxlength=""
+        -->
+        <input type="button" value="새 탭 열기" onclick="open()" hidden />
+        물품 가격:
+        <input type="text" size="10" />
+        <br />
+        물품 수량:
+        <input type="text" />
+        <br />
+        물품 재고:
+        <input type="text" />
+        <br />
+        <input type="button" value="확인" onclick="alert('확인 완료')" />
+      </form>
+    </div>
+    <div hidden>
+      <!--
+        textarea: 여러 줄을 작성할 수 있는 태그
+        텍스트 창에 너비, 높이를 지정할 수 있다. HTML 행열, CSS 너비 높이
+      -->
+      <form>
+        <input type="text" placeholder="내용을 입력하세요" />
+      </form>
+      <form>
+        First name :<br />
+        <input type="text" name="firstname" maxlength="3" required /><br />
+        <!-- 필수입력 + 3자 제한 -->
+        Last name :<br />
+        <input type="text" name="lastname" /><br />
+        별명 :<br />
+        <input type="text" name="alias" placeholder="없을시 생략" />
+        <!-- 힌트 표시 -->
+      </form>
+    </div>
+    <div>
+      <!--
+        체크박스: 2개 이상 체크할 수 있다
+          checked: 기본값으로 체크 표시
+      -->
+      <form>
+        과일 선택:
+        <input type="checkbox" />Apple <input type="checkbox" />Grape
+        <input type="checkbox" />Orange<br /><br />
+        성별:
+        <input type="radio" name="gender" value="male" />남성
+        <input type="radio" name="gender" value="female" />여성 <br /><br />
+        이메일:
+        <input type="email" required /><br />
+        <input type="submit" value="전송하기" /><br /><br />
+        <input type="color" name="my_color" />
+      </form>
+    </div>
+  </body>
+</html>
