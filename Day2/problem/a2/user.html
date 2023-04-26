@@ -1,0 +1,105 @@
+<!-- user.html -->
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>사이버회원 회원가입</title>
+  </head>
+  <body>
+    <div id="register">
+      <div>
+        <p>회원구분</p>
+        <input type="radio" name="account_type" id="account_type_verified" required />
+        <label for="account_type_verified">정회원</label>
+        <input type="radio" name="account_type" id="account_type_cyber" required />
+        <label for="account_type_cyber">사이버회원</label>
+      </div>
+      <div>
+        <p>이름</p>
+        <input type="text" name="name" id="user_name" required />
+        <p>공백없이 한글만 입력 가능</p>
+      </div>
+      <div>
+        <p>닉네임</p>
+        <input type="text" name="nickname" id="nickname" required />
+        <p>공백없이 한글, 영문, 숫자만 입력가능 (60일 이내 변경 불가)</p>
+      </div>
+      <div>
+        <p>아이디</p>
+        <input type="text" name="id" id="id" required />
+        <p>3~12자의 영문 소문자, 숫자와 특수기호(_)만 사용할 수 있습니다.</p>
+      </div>
+      <div>
+        <p>비밀번호</p>
+        <input type="password" name="password" id="password" required />
+        <p>비밀번호 확인</p>
+        <input type="password" name="password_check" id="password_check" required />
+      </div>
+      <div>
+        <p>재발급질문</p>
+        <select name="password_reset_question" id="password_reset_question" required>
+          <option value="" disabled selected>선택하십시오</option>
+          <option value="school">통학하고 있거나 졸업한 학교 이름</option>
+        </select>
+      </div>
+      <div>
+        <p>재발급답변</p>
+        <input type="text" name="password_reset_answer" id="password_reset_answer" required />
+      </div>
+      <div>
+        <p>이메일주소</p>
+        <input type="email" name="email" id="email" required />
+        <input type="checkbox" name="receive_mail" id="receive_mail" />
+        <label for="receive_mail">국민농업포럼에서 제공하는 정보 메일을 받겠습니다</label>
+      </div>
+      <div>
+        <p>연락처(집)</p>
+        <input type="tel" name="tel_home" id="tel_home" />
+        <p>연락처(근무처)</p>
+        <input type="tel" name="tel_work" id="tel_work" />
+      </div>
+      <div>
+        <p>핸드폰번호</p>
+        <input type="tel" name="phone_number" id="phone_number" required />
+      </div>
+      <div>
+        <p>근무처</p>
+        <input type="text" name="work_name" id="work_name" />
+        <p>직위</p>
+        <input type="text" name="work_2" id="work_2" />
+      </div>
+      <div>
+        <p>직업</p>
+        <input type="text" name="job" id="job" required />
+      </div>
+      <div>
+        <p>주소</p>
+        <input type="number" name="post_number1" id="post_number1" required />
+        <p>-</p>
+        <input type="number" name="post_number2" id="post_number2" required />
+        <button type="button">우편번호</button>
+        <input type="text" name="address1" id="address1" required />
+        <input type="text" name="address2" id="address2" required />
+      </div>
+      <div>
+        <p>정보공개</p>
+        <input type="checkbox" name="public_my_info" id="public_my_info" required />
+        <label for="public_my_info"
+          >다른 분들이 나의 정보를 볼 수 있도록 합니다. 정보 공개를 바꾸시면 앞으로 0일 이내에는
+          변경이 안됩니다.</label
+        >
+      </div>
+      <div>
+        <p>생년월일</p>
+        <input type="date" name="birthday" id="birthday" />
+        <p>성별</p>
+        <select name="gender" id="gender">
+          <option value="male">남성</option>
+          <option value="female">여성</option>
+        </select>
+      </div>
+    </div>
+  </body>
+</html>
