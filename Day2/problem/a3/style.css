@@ -1,0 +1,15 @@
+body {
+  font-weight: 700;
+}
+
+.main {
+  color: hotpink;
+}
+
+.sub {
+  color: cornflowerblue;
+}
+
+#useless {
+  font-size: 2rem;
+}
