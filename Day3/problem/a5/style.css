@@ -1,0 +1,35 @@
+#login {
+  display: flex;
+  gap: 1.5rem;
+}
+
+#login .login_content {
+  border: 1px solid gray;
+  padding: 2rem;
+}
+
+#login .log > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#login > .log .logo {
+  margin-bottom: 1rem;
+}
+
+#login > .log input {
+  background-color: rgb(248, 248, 248);
+  border: 1px solid rgb(206, 206, 206);
+  border-radius: 4px;
+  padding: 0.5rem;
+  margin-bottom: 0.375rem;
+}
+
+button.login_btn {
+  background-color: rgb(0, 149, 246);
+  color: white;
+  border: none;
+  padding: 1rem auto;
+}
