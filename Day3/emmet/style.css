@@ -1,0 +1,25 @@
+/* https://docs.emmet.io/cheat-sheet/ */
+
+.fruit {
+  background-color: blueviolet;
+  /* w100 */
+  width: 100px;
+  /* h100 */
+  height: 100px;
+  /* m20 */
+  margin: 20px;
+}
+
+.class {
+  /* m10p30 */
+  margin: 10% 30px;
+  /* fsi */
+  font-style: italic;
+  /* fs:n */
+  font-style: normal;
+  /* bd 기본값 설정 */
+  border: 1px solid #000;
+
+  /* bdn */
+  border: none;
+}

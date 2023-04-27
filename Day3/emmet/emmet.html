@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>에밋</title>
+  </head>
+  <body>
+    <!--
+      태그와 CSS 문법 자동 완성해 주는 기능
+
+      명령어 작성 후 Tab 키로 자동 완성
+      자식 요소 '>' 태그 안에 태그를 집어넣을 때 사용
+      div 태그 자동완성 'div' 입력
+    -->
+    <div>
+      <p></p>
+    </div>
+
+    <!-- div > p > span -->
+    <div>
+      <p><span></span></p>
+    </div>
+
+    <div>
+      <ul></ul>
+    </div>
+
+    <!-- div>ul>li -->
+    <div>
+      <ul>
+        <li></li>
+      </ul>
+    </div>
+
+    <!--
+      li 여러 개 태그 여러 개를 만들고 싶을 때 *숫자
+
+      div>ul>li*5
+    -->
+    <div>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+
+    <!--
+      형제 '+'
+
+      'div>p+span'
+    -->
+    <div>
+      <p></p>
+      <span></span>
+    </div>
+
+    <!--
+      올라가기 '^'
+
+      div>ol>li^p+a
+    -->
+    <div>
+      <ol>
+        <li></li>
+      </ol>
+      <p></p>
+      <a href=""></a>
+    </div>
+
+    <nav>
+      <ul>
+        <li></li>
+      </ul>
+    </nav>
+
+    <!--
+      div>ul>li^^div
+    -->
+    <div>
+      <ul>
+        <li></li>
+      </ul>
+    </div>
+    <div></div>
+
+    <!-- div.class -->
+    <div class="class"></div>
+
+    <!--
+      '*' 반복하기
+      *숫자
+
+      N번부터 시작
+      $@숫자
+
+      ul>li.item$@3*5
+    -->
+    <ul>
+      <li class="item3"></li>
+      <li class="item4"></li>
+      <li class="item5"></li>
+      <li class="item6"></li>
+      <li class="item7"></li>
+    </ul>
+
+    <!--
+      span#hello
+    -->
+    <span id="hello"></span>
+
+    <!-- form#search -->
+    <form action="" id="search"></form>
+
+    <!--
+      클래스 이름이 여러 개
+
+      p.class.class2.class3
+    -->
+    <p class="class class2 class3"></p>
+
+    <!--
+      속성 태그명 '[키워드=값,]'
+
+      p[title="hello world"]
+      td[rowspan=2 colspan=3 title]
+    -->
+    <p title="hello world"></p>
+    <td rowspan="2" colspan="3" title=""></td>
+
+    <!--
+      텍스트 태그명
+
+      .fruit{apple}
+      
+    -->
+    <div class="fruit">apple</div>
+
+    <!-- a{click me} -->
+    <a href="">click me</a>
+
+    <!-- #header -->
+    <div id="header"></div>
+
+    <!-- ul#hello -->
+    <ul id="hello"></ul>
+
+    <!-- div.a1.a2.a3 -->
+    <div class="a1 a2 a3"></div>
+
+    <!--
+      table
+
+      table>.row>.col
+    -->
+    <table>
+      <tr class="row">
+        <td class="col"></td>
+      </tr>
+    </table>
+
+    <!-- table.row$*2>.col$ -->
+    <table class="row1">
+      <tr class="col1"></tr>
+    </table>
+    <table class="row2">
+      <tr class="col2"></tr>
+    </table>
+
+    <!-- a:link -->
+    <a href="http://"></a>
+
+    <!-- table>tr+tr>td#data -->
+    <table>
+      <tr></tr>
+      <tr>
+        <td id="data"></td>
+      </tr>
+    </table>
+  </body>
+</html>
