@@ -13,14 +13,15 @@ body {
 }
 
 .login {
-  width: 24rem;
   display: flex;
   align-content: center;
   justify-content: center;
   margin: auto;
+  height: auto;
 }
 
 .login > .login_int {
+  width: 20rem;
 }
 
 .login_header {
