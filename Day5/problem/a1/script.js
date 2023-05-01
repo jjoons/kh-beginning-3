@@ -105,3 +105,32 @@ void (function () {
     console.log('C')
   }
 })()
+
+// 1. 등급 변수 생성
+// 2. 점수에 따른 등급 계산
+//    모두 90점 이상이면 'S'
+//    재력이 90 이상이면서 외모와 대화 총 점이 160이상이면 'A'
+//    적어도 하나가 90점 이상이면 'B'
+//    나머지는 'C'
+
+void (function () {
+  'use strict'
+
+  const face = 90
+  const talking = 80
+  const rich = 90
+
+  let grade = ''
+
+  if (face >= 90 && talking >= 90 && rich >= 90) {
+    grade = 'S'
+  } else if (rich >= 90 && face + talking >= 160) {
+    grade = 'A'
+  } else if (face >= 90 || talking >= 90 || rich >= 90) {
+    grade = 'B'
+  } else {
+    grade = 'C'
+  }
+
+  console.log(grade)
+})()
