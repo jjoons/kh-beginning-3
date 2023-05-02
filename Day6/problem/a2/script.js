@@ -26,3 +26,38 @@ console.log('========== 학생 목록 ==========')
 students.forEach((v) => {
   console.log(`이름: ${v.name}, 과목: ${v.subject}, 점수: ${v.score}`)
 })
+
+void (function (D) {
+  'use strict'
+
+  const createElements = (el, count) => [...Array(count)].map(() => D.createElement(el))
+
+  /**
+   *
+   * @param {Student} student 학생
+   */
+  const createStudentEl = (student) => {
+    const tr = D.createElement('tr')
+    const [tdName, tdSubject, tdScore] = createElements('td', 3)
+
+    tdName.innerText = student.name
+    tdSubject.innerText = student.subject
+    tdScore.innerText = student.score
+
+    tr.append(tdName, tdSubject, tdScore)
+    return tr
+  }
+
+  /** @type {HTMLTableSectionElement | null} */
+  const tbodyEl = D.querySelector('table > tbody')
+
+  if (!(tbodyEl instanceof HTMLTableSectionElement)) {
+    console.log('table > tbody가 없습니다')
+    return
+  }
+
+  for (const i of students) {
+    const a = createStudentEl(i)
+    tbodyEl.append(a)
+  }
+})(document)
