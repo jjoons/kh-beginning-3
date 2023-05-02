@@ -14,6 +14,38 @@ void (function (D) {
       this.weight = weight
     }
 
+    get name() {
+      return this.name
+    }
+
+    set name(name) {
+      this.name = name
+    }
+
+    get age() {
+      return this.age
+    }
+
+    set age(age) {
+      this.age = age
+    }
+
+    get height() {
+      return this.height
+    }
+
+    set height(height) {
+      this.height = height
+    }
+
+    get weight() {
+      return this.weight
+    }
+
+    set weight(weight) {
+      this.weight = weight
+    }
+
     toString() {
       return `이름: ${this.name}, 나이: ${this.age}, 신장: ${this.height}, 몸무게: ${this.weight}`
     }
@@ -29,6 +61,22 @@ void (function (D) {
       this.major = major
     }
 
+    get grade() {
+      return this.grade
+    }
+
+    set grade(grade) {
+      this.grade = grade
+    }
+
+    get major() {
+      return this.major
+    }
+
+    set major(major) {
+      this.major = major
+    }
+
     toString() {
       return `이름: ${this.name}, 나이: ${this.age}, 신장: ${this.height}, 몸무게: ${this.weight}, 학년: ${this.grade}, 전공: ${this.major}`
     }
@@ -41,6 +89,22 @@ void (function (D) {
     constructor(name, age, height, weight, salary, dept) {
       super(name, age, height, weight)
       this.salary = salary
+      this.dept = dept
+    }
+
+    get salary() {
+      return this.salary
+    }
+
+    set salary(salary) {
+      this.salary = salary
+    }
+
+    get dept() {
+      return this.dept
+    }
+
+    set dept(dept) {
       this.dept = dept
     }
 
