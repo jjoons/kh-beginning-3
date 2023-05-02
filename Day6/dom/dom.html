@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML DOM 문서에 대해서</title>
+    <script src="dom.js"></script>
+  </head>
+  <body>
+    <!--
+      DOM
+        - 브라우저가 웹 페이지를 JavaScript 객체화하는 방식
+        - 이를 위해 제공되는 대표 객체가 'document'
+          document: 웹 페이지 문서 정보를 모두 가지는 객체
+
+      웹 요소에 접근하기
+        원하는 요소에 찾아가기 (제목, 태그, 아이디, 클래스)
+        querySelector(선택자)
+          id: #아이디 / class: .클래스
+          반환값: 한 개의 Node
+        querySelectorAll(선택자)
+          반환값: 메소드는 값이 여러 개일 때 배열에 저장한다. (NodeList)
+
+      HTML에서 요소값을 가져와서 텍스트 변경
+        변수명 = querySelector(선택자)
+          변수명.innerText
+            텍스트를 가져오거나 수정할 수 있다
+          변수명.innerHTML
+            태그와 텍스트를 한꺼번에 가지고 온다
+    -->
+  </body>
+</html>
