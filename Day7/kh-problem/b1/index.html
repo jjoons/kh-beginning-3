@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script defer src="js/script.js"></script>
+    <style>
+      table {
+        table-layout: fixed;
+        border-collapse: collapse;
+        border: 1px solid;
+      }
+
+      tbody > tr > td {
+        height: 2rem;
+      }
+
+      td > button {
+        width: 100%;
+        height: 100%;
+      }
+
+      thead > tr > th {
+        border: 1px solid;
+      }
+
+      thead > tr > th > input {
+        padding: 0;
+        border: 0;
+        font-size: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div>
+        <h1>Practice2-2</h1>
+        <table>
+          <thead>
+            <tr>
+              <th colspan="4">
+                <input type="text" name="result" id="result" readonly />
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <button type="button" value="C">C</button>
+              </td>
+              <td>
+                <button type="button" value="bs">bs</button>
+              </td>
+              <td>
+                <button type="button" value="%">%</button>
+              </td>
+              <td>
+                <button type="button" value="/">/</button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button type="button" value="7">7</button>
+              </td>
+              <td>
+                <button type="button" value="8">8</button>
+              </td>
+              <td>
+                <button type="button" value="9">9</button>
+              </td>
+              <td>
+                <button type="button" value="X">X</button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button type="button" value="4">4</button>
+              </td>
+              <td>
+                <button type="button" value="5">5</button>
+              </td>
+              <td>
+                <button type="button" value="6">6</button>
+              </td>
+              <td>
+                <button type="button" value="-">-</button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button type="button" value="1">1</button>
+              </td>
+              <td>
+                <button type="button" value="2">2</button>
+              </td>
+              <td>
+                <button type="button" value="3">3</button>
+              </td>
+              <td>
+                <button type="button" value="4">+</button>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <button type="button" value="0">0</button>
+              </td>
+              <td>
+                <button type="button" value=".">.</button>
+              </td>
+              <td>
+                <button type="button" value="=">=</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

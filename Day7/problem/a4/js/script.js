@@ -32,4 +32,11 @@ void (function (D) {
   cbAll.forEach((e) => {
     e.addEventListener('change', function () {})
   })
+
+  /* setInterval(() => {
+    const randValue = ~~(Math.random() * cbAll.length)
+
+    cbAll[randValue].click()
+    selectBtn.click()
+  }, 1000) */
 })(document)
