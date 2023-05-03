@@ -1,0 +1,31 @@
+body {
+  font-size: 0.875rem;
+}
+
+table {
+  /* table-layout: fixed; */
+}
+
+th {
+  --bs-table-bg: #f1faff;
+}
+
+th,
+td {
+  vertical-align: middle;
+}
+
+thead > tr:first-child > th,
+tbody > tr > td:first-child,
+tbody > tr > td:nth-of-type(1) {
+  text-align: center;
+}
+
+tbody > tr > td:nth-of-type(2) {
+  font-weight: 700;
+}
+
+tbody > tr > td:nth-last-of-type(2),
+tbody > tr > td:last-of-type {
+  text-align: center;
+}
