@@ -1,0 +1,45 @@
+#course_manage {
+  display: flex;
+  flex-direction: column;
+  margin: 4rem 0 0 4rem;
+  max-width: 32rem;
+}
+
+#course_manage > .title {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+#course_manage > #course_list {
+  display: flex;
+  flex-direction: column;
+}
+
+#course_manage > #course_list > .course {
+  display: flex;
+  justify-content: space-between;
+}
+
+#course_manage > #course_list > .course .course_title {
+  font-weight: 700;
+}
+
+.course_register_button {
+  border: none;
+  background-color: #3162c7;
+  padding: 0.375rem 0;
+  font-size: 0.75rem;
+  color: white;
+  width: 8rem;
+  line-height: 1rem;
+}
+
+.course_cancel_button {
+  border: none;
+  background-color: #808080;
+  padding: 0.375rem 0;
+  font-size: 0.75rem;
+  color: white;
+  width: 8rem;
+  line-height: 1rem;
+}

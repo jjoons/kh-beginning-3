@@ -1,22 +1,19 @@
 'use strict'
 
 void (function (D) {
-  /** @type {import('../types/index').SchoolConstructor} */
-  const school = new School()
   /** @type {HTMLFormElement | null} */
   const form = D.forms[0]
+
+  if (school.getAccountInfo()) {
+    alert('이미 로그인되어 있으므로 학사관리 페이지로 이동합니다')
+    location.href = 'manage.html'
+  }
 
   if (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault()
 
-      /**
-       * @type {HTMLFormControlsCollection & {
-       *   user_id?: HTMLInputElement,
-       *   user_password?: HTMLInputElement,
-       * }}
-       */
-
+      /** @type {import('../types/index').LoginFormElements} */
       const { user_id, user_password } = this.elements
 
       if (user_id && user_password) {

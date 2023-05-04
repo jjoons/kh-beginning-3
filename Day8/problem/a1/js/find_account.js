@@ -1,17 +1,11 @@
 'use strict'
 
 void (function (D) {
-  /** @type {import('../types/index').SchoolConstructor} */
-  const school = new School()
-  /**
-   * @type {import('../types/index').Forms}
-   */
+  /** @type {import('../types/index').Forms} */
   const { find_account_id, find_account_password } = D.forms
 
   if (find_account_id) {
-    /**
-     * @type {import('../types/index').FindAccountFormElements}
-     */
+    /** @type {import('../types/index').FindAccountFormElements} */
     const { user_name: findIdUserName, user_tel: findIdUserTel } = find_account_id.elements
 
     if (findIdUserName && findIdUserTel) {
@@ -35,9 +29,7 @@ void (function (D) {
   }
 
   if (find_account_password) {
-    /**
-     * @type {import('../types/index').FindAccountFormElements}
-     */
+    /** @type {import('../types/index').FindAccountFormElements} */
     const { user_name: findPwUserName, user_tel: findPwUserTel } = find_account_password.elements
 
     console.log(find_account_password.elements)

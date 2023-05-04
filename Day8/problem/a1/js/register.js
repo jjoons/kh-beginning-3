@@ -1,20 +1,11 @@
 'use strict'
 
 void (function (D) {
-  /** @type {import('../types/index').SchoolConstructor} */
-  const school = new School()
   const form = D.forms[0]
 
   if (form) {
     form.addEventListener('submit', function (e) {
-      /**
-       * @type {HTMLFormControlsCollection & {
-       *   user_name?: HTMLInputElement,
-       *   user_id?: HTMLInputElement,
-       *   user_password?: HTMLInputElement,
-       *   user_tel?: HTMLInputElement
-       * }}
-       */
+      /** @type {import('../types/index').RegisterFormElements} */
       let { user_name, user_id, user_password, user_tel } = this.elements
 
       e.preventDefault()
@@ -30,9 +21,10 @@ void (function (D) {
         if (
           school.addAccount(user_name.value, user_id.value, user_password.value, user_tel.value)
         ) {
-          alert('등록 성공')
+          alert('회원가입이 완료되었습니다')
+          location.href = 'login.html'
         } else {
-          alert('등록 실패')
+          alert('회원가입에 실패했습니다')
         }
       }
     })

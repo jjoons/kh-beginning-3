@@ -21,6 +21,14 @@ button {
   cursor: pointer;
 }
 
+[hidden] {
+  display: none;
+}
+
+#wrap {
+  margin-bottom: 8rem;
+}
+
 #contents {
   display: flex;
 }
@@ -63,4 +71,9 @@ input[type='tel'] {
   padding: 0.375rem 0;
   border: 1px solid gray;
   width: calc(100% - 2px);
+}
+
+button.no_styled {
+  border: none;
+  padding: 0;
 }

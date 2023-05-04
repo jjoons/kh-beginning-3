@@ -11,14 +11,19 @@
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css"
     />
     <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/manage.css" />
+    <link rel="stylesheet" href="css/course_manage.css" />
     <script defer src="js/common.js"></script>
-    <script defer src="js/manage.js"></script>
+    <script defer src="js/course_manage.js"></script>
   </head>
   <body>
+    <!-- TODO 미완 -->
+
     <div id="wrap">
       <header>
         <div id="header_buttons">
+          <button type="button" id="home_button" class="no_styled">
+            <img src="img/홈.jpg" alt="홈" />
+          </button>
           <button type="button" id="logout_button" class="no_styled">
             <img src="img/로그아웃.jpg" alt="로그아웃" />
           </button>
@@ -36,9 +41,17 @@
           </div>
         </aside>
         <main>
-          <div id="manage">
-            <p>{{@user_id}}님 반갑습니다.</p>
-            <p>좌측에서 수행하실 작업을 선택해주세요.</p>
+          <div id="course_manage">
+            <div class="title">수강신청/수강철회</div>
+            <div id="course_list">
+              <div class="course" data-name="as">
+                <span class="course_title">as</span>
+                <span>
+                  <button type="button" class="course_register_button">수강신청</button>
+                  <button type="button" class="course_cancel_button">-</button>
+                </span>
+              </div>
+            </div>
           </div>
         </main>
       </div>

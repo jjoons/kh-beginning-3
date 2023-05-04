@@ -15,23 +15,16 @@ class School {
 
   static #createdConstructor = false
 
-  /**
-   * @typedef Account
-   * @property {string} name
-   * @property {string} id
-   * @property {string} password
-   * @property {string} tel
-   */
-
-  /**
-   * @type {Account[]}
-   */
+  /** @type {import('../types/index').Account[]} */
   accs = []
 
   get accounts() {
     this.sync()
     return this.accs
   }
+
+  /** @type {import('../types/index').Account | null} */
+  currentAccount = null
 
   constructor() {
     if (School.#createdConstructor) {
@@ -50,16 +43,12 @@ class School {
     }
   }
 
-  /**
-   *
-   * @param {string} id
-   * @param {string} password
-   * @returns
-   */
+  /** @type {import('../types/index').SchoolConstructor['login']} */
   login(id, password) {
     for (const i of this.accounts) {
       if (i.id === id && i.password === password) {
-        sessionStorage.setItem(this.CURRENT_USER_KEY, JSON.stringify(i))
+        this.currentAccount = i
+        this.sync()
         return true
       }
     }
@@ -68,23 +57,19 @@ class School {
   }
 
   logout() {
+    this.currentAccount = null
     sessionStorage.removeItem(this.CURRENT_USER_KEY)
   }
 
   sync() {
     sessionStorage.setItem(this.ACCOUNTS_KEY, JSON.stringify(this.accs))
+    sessionStorage.setItem(this.CURRENT_USER_KEY, JSON.stringify(this.currentAccount))
   }
 
-  /**
-   *
-   * @param {string} name
-   * @param {string} id
-   * @param {string} password
-   * @param {string} tel
-   * @returns
-   */
+  /** @type {import('../types/index').SchoolConstructor['addAccount']} */
   addAccount(name, id, password, tel) {
-    const newAccount = { name, id, password, tel }
+    /** @type {import('../types/index').Account} */
+    const newAccount = { name, id, password, tel, courses: [] }
 
     if (this.hasID(id)) return false
 
@@ -93,11 +78,7 @@ class School {
     return true
   }
 
-  /**
-   *
-   * @param {string} id
-   * @returns
-   */
+  /** @type {import('../types/index').SchoolConstructor['hasID']} */
   hasID(id) {
     this.sync()
 
@@ -110,12 +91,7 @@ class School {
     return false
   }
 
-  /**
-   *
-   * @param {string} name
-   * @param {string} tel
-   * @returns
-   */
+  /** @type {import('../types/index').SchoolConstructor['findID']} */
   findID(name, tel) {
     for (const i of this.accounts) {
       if (i.name === name && i.tel === tel) {
@@ -126,12 +102,7 @@ class School {
     return null
   }
 
-  /**
-   *
-   * @param {string} name
-   * @param {string} tel
-   * @returns
-   */
+  /** @type {import('../types/index').SchoolConstructor['findPw']} */
   findPw(name, tel) {
     for (const i of this.accounts) {
       if (i.name === name && i.tel === tel) {
@@ -141,4 +112,45 @@ class School {
 
     return null
   }
+
+  /** @type {import('../types/index').SchoolConstructor['getAccountInfo']} */
+  getCurrentAccountInfo() {
+    const returnValue = sessionStorage.getItem(this.CURRENT_USER_KEY)
+    return returnValue ? JSON.parse(returnValue) : null
+  }
+
+  /** @type {import('../types/index').SchoolConstructor['addCourse']} */
+  addCourse(name) {}
+
+  /** @type {import('../types/index').SchoolConstructor['addCourseToAccount']} */
+  addCourseToAccount(name) {
+    if (this.currentAccount) {
+      for (const i of this.currentAccount.courses) {
+        if (i.name === name) {
+          return false
+        }
+      }
+    } else {
+      return false
+    }
+
+    this.currentAccount.courses.push({ name })
+    this.sync()
+    return true
+  }
 }
+
+/** @type {import('../types/index').SchoolConstructor} */
+const school = new School()
+
+void (function (D) {
+  /** @type {HTMLButtonElement | null} */
+  const logoutBtn = D.querySelector('button#logout_button')
+
+  if (logoutBtn) {
+    logoutBtn.addEventListener('click', function (e) {
+      school.logout()
+      location.href = 'login.html'
+    })
+  }
+})(document)
