@@ -13,6 +13,8 @@ class School {
     return 'current_user'
   }
 
+  static #createdConstructor = false
+
   /**
    * @typedef Account
    * @property {string} name
@@ -32,6 +34,9 @@ class School {
   }
 
   constructor() {
+    if (School.#createdConstructor) {
+      throw new Error('이미 School이 선언되어있습니다')
+    } else School.#createdConstructor = true
     this.initStorage()
   }
 
@@ -54,11 +59,16 @@ class School {
   login(id, password) {
     for (const i of this.accounts) {
       if (i.id === id && i.password === password) {
+        sessionStorage.setItem(this.CURRENT_USER_KEY, JSON.stringify(i))
         return true
       }
     }
 
     return false
+  }
+
+  logout() {
+    sessionStorage.removeItem(this.CURRENT_USER_KEY)
   }
 
   sync() {
@@ -110,6 +120,22 @@ class School {
     for (const i of this.accounts) {
       if (i.name === name && i.tel === tel) {
         return i.id
+      }
+    }
+
+    return null
+  }
+
+  /**
+   *
+   * @param {string} name
+   * @param {string} tel
+   * @returns
+   */
+  findPw(name, tel) {
+    for (const i of this.accounts) {
+      if (i.name === name && i.tel === tel) {
+        return i.password
       }
     }
 

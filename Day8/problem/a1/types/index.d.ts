@@ -10,6 +10,7 @@ export interface SchoolConstructor {
   addAccount(name: string, id: string, password: string, tel: string): boolean
   hasID(id: string): boolean
   findID(name: string, tel: string): string | null
+  findPw(name: string, tel: string): string | null
 }
 
 interface Account {
@@ -17,4 +18,13 @@ interface Account {
   id: string
   password: string
   tel: string
+}
+
+export type Forms<T = {}> = HTMLCollectionOf<HTMLFormElement> &
+  Record<string, HTMLFormElement | undefined> &
+  T
+
+export interface FindAccountFormElements extends HTMLFormControlsCollection {
+  user_name?: HTMLInputElement
+  user_tel?: HTMLInputElement
 }

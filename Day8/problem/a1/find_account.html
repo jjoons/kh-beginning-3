@@ -12,6 +12,8 @@
     />
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/find_account.css" />
+    <script defer src="js/common.js"></script>
+    <script defer src="js/find_account.js"></script>
   </head>
   <body>
     <div id="wrap">
@@ -33,11 +35,11 @@
           </div>
         </aside>
         <main>
-          <form id="find_account">
+          <div id="find_account">
             <div class="find_account_inner">
               <div class="find_account_title">ID/PW 찾기</div>
               <div class="find_account_fields_and_btns">
-                <div class="find_account_id">
+                <form class="find_account_id" name="find_account_id">
                   <div>ID</div>
                   <div class="fields">
                     <div class="user_name_input">
@@ -46,44 +48,48 @@
                         name="user_name"
                         id="user_name"
                         placeholder="이름을 입력하세요"
+                        required
                       />
                     </div>
-                    <div class="user_password_input">
+                    <div class="user_tel_input">
                       <input
-                        type="password"
-                        name="user_password"
-                        id="user_password"
+                        type="tel"
+                        name="user_tel"
+                        id="user_tel"
                         placeholder="전화번호를 입력하세요"
+                        required
                       />
                     </div>
                   </div>
-                  <button type="button" class="button">ID 찾기</button>
-                </div>
-                <div class="find_account_password">
+                  <button type="submit" class="button">ID 찾기</button>
+                </form>
+                <form class="find_account_password" name="find_account_password">
                   <div>PW</div>
                   <div class="fields">
-                    <div class="user_id_input">
+                    <div class="user_name_input">
                       <input
                         type="text"
-                        name="user_id"
-                        id="user_id"
+                        name="user_name"
+                        id="user_name"
                         placeholder="이름을 입력하세요"
+                        required
                       />
                     </div>
-                    <div class="user_password_input">
+                    <div class="user_tel_input">
                       <input
-                        type="password"
-                        name="user_password"
-                        id="user_password"
+                        type="tel"
+                        name="user_tel"
+                        id="user_tel"
                         placeholder="전화번호를 입력하세요"
+                        required
                       />
                     </div>
                   </div>
-                  <button type="button" class="button">PW 찾기</button>
-                </div>
+                  <button type="submit" class="button">PW 찾기</button>
+                </form>
               </div>
             </div>
-          </form>
+          </div>
         </main>
       </div>
     </div>
