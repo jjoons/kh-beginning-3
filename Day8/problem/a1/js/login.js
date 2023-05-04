@@ -4,7 +4,7 @@ void (function (D) {
   /** @type {HTMLFormElement | null} */
   const form = D.forms[0]
 
-  if (school.getAccountInfo()) {
+  if (school.getCurrentAccountInfo()) {
     alert('이미 로그인되어 있으므로 학사관리 페이지로 이동합니다')
     location.href = 'manage.html'
   }

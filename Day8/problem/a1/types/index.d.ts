@@ -70,7 +70,10 @@ export interface SchoolConstructor {
    */
   findPw(name: string, tel: string): string | null
 
-  getAccountInfo(): Account | null
+  /**
+   * 현재 로그인한 계정의 정보를 출력하는 메소드
+   */
+  getCurrentAccountInfo(): Account | null
   /**
    * 수강 과목을 추가하는 메소드
    * @param name 과목 이름

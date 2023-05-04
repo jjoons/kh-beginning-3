@@ -4,7 +4,7 @@ void (function (D) {
   /** @type {HTMLDivElement | null} */
   const manageEl = D.querySelector('#manage')
 
-  const info = school.getAccountInfo()
+  const info = school.getCurrentAccountInfo()
 
   if (!info) {
     alert('비정상적인 접근입니다. 로그인 페이지로 이동합니다.')
