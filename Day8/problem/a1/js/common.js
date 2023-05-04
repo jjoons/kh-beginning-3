@@ -15,15 +15,16 @@ class School {
 
   static #createdConstructor = false
 
-  /** @type {import('../types/index').Account[]} */
+  /** @type {import('../types/index').SchoolConstructor['accs']} */
   accs = []
 
+  /** @type {import('../types/index').SchoolConstructor['accounts']} */
   get accounts() {
     this.sync()
     return this.accs
   }
 
-  /** @type {import('../types/index').Account | null} */
+  /** @type {import('../types/index').SchoolConstructor['currentAccount']} */
   currentAccount = null
 
   constructor() {
@@ -33,6 +34,7 @@ class School {
     this.initStorage()
   }
 
+  /** @type {import('../types/index').SchoolConstructor['initStorage']} */
   initStorage() {
     const accs = sessionStorage.getItem(this.ACCOUNTS_KEY)
 
@@ -56,11 +58,13 @@ class School {
     return false
   }
 
+  /** @type {import('../types/index').SchoolConstructor['logout']} */
   logout() {
     this.currentAccount = null
     sessionStorage.removeItem(this.CURRENT_USER_KEY)
   }
 
+  /** @type {import('../types/index').SchoolConstructor['sync']} */
   sync() {
     sessionStorage.setItem(this.ACCOUNTS_KEY, JSON.stringify(this.accs))
     sessionStorage.setItem(this.CURRENT_USER_KEY, JSON.stringify(this.currentAccount))
@@ -113,7 +117,7 @@ class School {
     return null
   }
 
-  /** @type {import('../types/index').SchoolConstructor['getAccountInfo']} */
+  /** @type {import('../types/index').SchoolConstructor['getCurrentAccountInfo']} */
   getCurrentAccountInfo() {
     const returnValue = sessionStorage.getItem(this.CURRENT_USER_KEY)
     return returnValue ? JSON.parse(returnValue) : null
