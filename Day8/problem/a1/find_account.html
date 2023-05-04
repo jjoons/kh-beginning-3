@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css"
+    />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/find_account.css" />
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+        <div id="header_buttons">
+          <a href="login.html">
+            <img src="img/홈.jpg" alt="" />
+          </a>
+        </div>
+        <div id="logo">
+          <img src="img/덕성여대_.jpg" alt="덕성여대" />
+        </div>
+      </header>
+      <div id="contents">
+        <aside>
+          <div class="member_info_text">회원정보</div>
+          <div class="sidebar_buttons">
+            <a href="find_account.html" class="button">ID/PW 찾기</a>
+          </div>
+        </aside>
+        <main>
+          <form id="find_account">
+            <div class="find_account_inner">
+              <div class="find_account_title">ID/PW 찾기</div>
+              <div class="find_account_fields_and_btns">
+                <div class="find_account_id">
+                  <div>ID</div>
+                  <div class="fields">
+                    <div class="user_name_input">
+                      <input
+                        type="text"
+                        name="user_name"
+                        id="user_name"
+                        placeholder="이름을 입력하세요"
+                      />
+                    </div>
+                    <div class="user_password_input">
+                      <input
+                        type="password"
+                        name="user_password"
+                        id="user_password"
+                        placeholder="전화번호를 입력하세요"
+                      />
+                    </div>
+                  </div>
+                  <button type="button" class="button">ID 찾기</button>
+                </div>
+                <div class="find_account_password">
+                  <div>PW</div>
+                  <div class="fields">
+                    <div class="user_id_input">
+                      <input
+                        type="text"
+                        name="user_id"
+                        id="user_id"
+                        placeholder="이름을 입력하세요"
+                      />
+                    </div>
+                    <div class="user_password_input">
+                      <input
+                        type="password"
+                        name="user_password"
+                        id="user_password"
+                        placeholder="전화번호를 입력하세요"
+                      />
+                    </div>
+                  </div>
+                  <button type="button" class="button">PW 찾기</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

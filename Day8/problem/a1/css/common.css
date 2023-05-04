@@ -1,0 +1,66 @@
+:root {
+  --font-sans: Pretendard, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+}
+
+header #logo > img {
+  min-height: 8rem;
+  max-height: 16rem;
+  width: 100%;
+}
+
+header > #header_buttons > a {
+  display: inline-block;
+}
+
+button {
+  cursor: pointer;
+}
+
+#contents {
+  display: flex;
+}
+
+#contents > aside {
+  display: flex;
+  flex-direction: column;
+  width: 16rem;
+}
+
+#contents > aside > .member_info_text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 2rem;
+}
+
+#contents > aside > .sidebar_buttons > a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid gray;
+}
+
+#contents > main {
+  flex: 1 1 0;
+}
+
+.button {
+  background-color: #87003a;
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 0.5rem 0;
+  font-size: 1rem;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='tel'] {
+  padding: 0.375rem 0;
+  border: 1px solid gray;
+  width: calc(100% - 2px);
+}

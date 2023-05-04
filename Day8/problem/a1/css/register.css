@@ -1,0 +1,31 @@
+#register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem auto;
+}
+
+#register .register_inner {
+  width: 25rem;
+}
+
+#register .register_title {
+  font-size: 1.25rem;
+  margin-bottom: 1.75rem;
+}
+
+#register .register_fields_and_btns {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+
+#register .register_fields_and_btns > .input_field {
+  display: flex;
+  justify-content: space-between;
+}
+
+#register .register_fields_and_btns > .input_field > input {
+  width: 80%;
+}

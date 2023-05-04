@@ -1,0 +1,32 @@
+#find_account {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem auto;
+}
+
+#find_account .find_account_inner {
+}
+
+#find_account .find_account_title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+#find_account .find_account_fields_and_btns {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+#find_account .find_account_fields_and_btns > [class*='find_account_'] .fields > :first-child {
+  margin-bottom: 0.75rem;
+}
+
+#find_account .find_account_fields_and_btns > [class*='find_account_'] {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 12rem;
+}
