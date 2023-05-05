@@ -3,7 +3,7 @@ declare const school: SchoolConstructor | undefined
 export interface SchoolConstructor {
   get ACCOUNTS_KEY(): string
   get CURRENT_USER_KEY(): string
-  #createdConstructor: boolean
+  _currentClass: SchoolConstructor | null
 
   /**
    * 계정의 정보를 보관하는 배열
@@ -15,12 +15,9 @@ export interface SchoolConstructor {
    */
   get accounts(): Account[]
 
-  /**
-   * 현재 로그인된 계정을 보관하는 변수
-   */
-  currentAccount: Account | null
-
   (): void
+
+  getConstructor(): SchoolConstructor
 
   /**
    * 처음 실행 시 storage의 내용을 초기화하는 메소드

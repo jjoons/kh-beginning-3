@@ -13,7 +13,8 @@ class School {
     return 'current_user'
   }
 
-  static #createdConstructor = false
+  /** @type {import('../types/index').SchoolConstructor['currentClass']} */
+  static _currentClass = null
 
   /** @type {import('../types/index').SchoolConstructor['accs']} */
   accs = []
@@ -28,20 +29,26 @@ class School {
   currentAccount = null
 
   constructor() {
-    if (School.#createdConstructor) {
-      throw new Error('이미 School이 선언되어있습니다')
-    } else School.#createdConstructor = true
+    if (School._currentClass) {
+      return School._currentClass
+    }
+
     this.initStorage()
   }
 
   /** @type {import('../types/index').SchoolConstructor['initStorage']} */
   initStorage() {
     const accs = sessionStorage.getItem(this.ACCOUNTS_KEY)
+    const currentAccount = sessionStorage.getItem(this.CURRENT_USER_KEY)
 
     if (!accs || accs === undefined + '') {
       this.sync()
     } else {
       this.accs = JSON.parse(accs)
+    }
+
+    if (!currentAccount || currentAccount === undefined + '' || currentAccount === null + '') {
+      this.sync()
     }
   }
 
