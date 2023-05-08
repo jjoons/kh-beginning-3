@@ -1,0 +1,13 @@
+#top_about {
+  background: url('../../배경/img/jumbotronBackground.jpg') no-repeat;
+  background-size: cover;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#top_about > * {
+  text-shadow: 2px 2px 2px black;
+}
