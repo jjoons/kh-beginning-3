@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>뷰포트</title>
+    <style>
+      /*
+      반응형 웹 디자인 화면 크기로 "%"를 주로 사용한다
+        "em" 또는 "rem": 배수로 크기를 지정한다
+
+      vw (viewport width): viewport의 가로 너비를 의미하며 단위는 "%"를 사용한다
+        1/100: 1000px -> 10vw
+
+      vh (viewport height): viewport의 세로 너비를 의미하며 단위는 "%"를 사용한다
+        600px -> 6vh
+      */
+
+      .container1 {
+        width: 50vw;
+        height: 50vh;
+        background-color: tomato;
+      }
+
+      /*
+      vmax(viewport max):
+        viewport의 가로/세로 너비 중 넓은 너비를 의미하고 단위는 "%"를 사용한다.
+      vmin(viewport min): 
+        viewport의 가로/세로 너비 중 좁은 너비를 의미하고 단위는 "%"를 사용한다.
+      */
+
+      .container2 {
+        width: 50vmax;
+        height: 50vmin;
+        background-color: mediumslateblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container1"></div>
+    <div class="container2"></div>
+  </body>
+</html>

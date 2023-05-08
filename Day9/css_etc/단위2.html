@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>단위2</title>
+    <style>
+      /*
+      px (픽셀): 고정된 크기
+      %: 비율. 부모 요소의 font-size 영향을 받는다
+      em: 자기 자신의 font-size 영향을 받는다
+      rem(root em): 가장 조상 요소(html 태그)의 영향을 받으며 배수로 커진다
+
+      font 16px -> 1em
+      */
+      html {
+        /* 1em */
+        font-size: 10px;
+      }
+
+      body * {
+        border: 2px solid red;
+      }
+
+      .container {
+        font-size: 10px;
+
+        /*
+        600px
+        container class font-size의 60배
+        */
+        width: 60em;
+      }
+
+      .parent {
+        /*
+        부모 요소에서 상속받은 font-size 10px
+        10 * 2 -> 20px
+        */
+        font-size: 2em;
+
+        /* 300px */
+        width: 15em;
+      }
+
+      .child {
+        font-size: 2em;
+
+        /* 최상위 부모는 HTML. 10px 일 경우 150px */
+        width: 15rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      Container
+      <div class="parent">
+        Parent
+        <div class="child">Child1</div>
+        <div class="child">Child2</div>
+      </div>
+    </div>
+  </body>
+</html>
