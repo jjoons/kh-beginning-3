@@ -1,0 +1,30 @@
+._container {
+  margin: 0 auto;
+  max-width: 72rem;
+}
+
+#login_reg_window {
+}
+
+#login_reg_window > .__inner {
+  max-width: 32rem;
+  margin: 0 auto;
+}
+
+._hidden {
+  display: none;
+}
+
+#login_reg_window .__select_buttons > .__active {
+  font-weight: 700;
+}
+
+._select-none {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+._btn1 {
+  padding: 1rem 0;
+  width: 16rem;
+}
